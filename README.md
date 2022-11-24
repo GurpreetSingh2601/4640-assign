@@ -1,4 +1,4 @@
-#Instructions to replicate provided configuration on a new machine. 4640 assignment
+# Instructions to replicate provided configuration on a new machine. 4640 assignment
 
 *Note - Terraform should be installed to automate the droplet creation process.
 
