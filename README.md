@@ -1,6 +1,4 @@
-####
-Instructions to replicate provided configuration on a new machine. 4640 assignment
-####
+#Instructions to replicate provided configuration on a new machine. 4640 assignment
 
 *Note - Terraform should be installed to automate the droplet creation process.
 
@@ -8,9 +6,8 @@ To install Terraform you can visit the link below:
 
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli 
 
-####
-Step 1
-####
+##Step 1
+
 Initially we have to create a .env file to source do_token which will be used to connect to our digitalocean account.
 
 Create a token from digitalocean account and paste that in .env file like :
@@ -25,9 +22,7 @@ After saving token in .env file, we will source it :
 source .env
 ```
 
-###
-Step 2
-###
+##Step 2
 
 A brief information about the file structure used in this assignment:
 ```bash
@@ -68,11 +63,9 @@ To destroy all the resources created
 terraform destroy
 ```
 
-###
-Step 3
-###
+##Step 3
 
-1. Testing that we can connect to bastion server:
+#####1. Testing that we can connect to bastion server:
 
 Run the commands below to be able to login to bastion server and then web server
 
@@ -85,19 +78,15 @@ ssh -A root@<publicIP of bastion server>
 ssh root@<privateIP of web server>
 ```
 Screenshots of successful login into bastion server and then to internal web server:
-###
-Bastion server
-###
+#####Bastion server
 
 ![bastion.JPG](https://github.com/GurpreetSingh2601/images_4640/blob/master/bastion.JPG?raw=true)
 
-###
-Web Server into bastion server
-###
+#####Web Server into bastion server
 
 ![webserver.JPG](https://github.com/GurpreetSingh2601/images_4640/blob/master/webserver.JPG?raw=true)
 
-2. Testing the connection to our mongodb database:
+#####2. Testing the connection to our mongodb database:
 
 Goto the digitalocean console and copy the database connection string and get the password from terraform.tfstate file
 
